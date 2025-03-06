@@ -1,0 +1,39 @@
+[user]
+	name = Evan Boehs
+	email = evan@boehs.org
+	signingkey = 372BFB0F2141C020
+[commit]
+	gpgsign = true
+[advice]
+	detachedHead = false
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[credential]
+	helper = osxkeychain
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+	autoSquash = true
+	updateRefs = true
+[help]
+        autocorrect = prompt
+[column]
+        ui = auto
+[branch]
+        sort = -committerdate
+[tag]
+        sort = version:refname
+[diff]
+        algorithm = histogram
+        colorMoved = plain
+        mnemonicPrefix = true
+        renames = true
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true

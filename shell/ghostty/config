@@ -1,0 +1,20 @@
+theme = GruvboxDark
+window-theme = dark
+
+window-padding-x = 12
+window-padding-y = 10
+
+background-opacity = 0.95
+background-blur-radius = 100
+
+font-thicken = true
+adjust-cursor-thickness=2
+
+#macos-titlebar-tabs = true
+
+# Make ⌥← and ⌥→ work as they do on linux
+keybind = alt+left=esc:[1;5D
+keybind = alt+right=esc:[1;5C
+macos-option-as-alt = true
+
+command = /opt/homebrew/bin/nu

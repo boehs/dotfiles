@@ -1,0 +1,118 @@
+{
+    "codeswing.autoSave": true,
+    "codeswing.layout": "splitRight",
+    "css.format.spaceAroundSelectorSeparator": true,
+    "css.lint.duplicateProperties": "warning",
+    "css.lint.important": "warning",
+    "debug.console.fontSize": 14,
+    "editor.accessibilitySupport": "off",
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.find.globalFindClipboard": true,
+    "editor.fontFamily": "'Input Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.formatOnSave": true,
+    "editor.glyphMargin": false,
+    "editor.guides.bracketPairs": "active",
+    "editor.inlayHints.fontSize": 10,
+    "editor.inlineSuggest.showToolbar": "always",
+    "editor.linkedEditing": true,
+    "editor.minimap.autohide": true,
+    "editor.minimap.maxColumn": 100,
+    "editor.minimap.renderCharacters": false,
+    "editor.padding.bottom": 200,
+    "editor.renderLineHighlightOnlyWhenFocus": true,
+    "editor.rulers": [
+      {
+        "column": 80
+      }
+    ],
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollBeyondLastLine": false,
+    "editor.suggest.preview": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "explorer.decorations.colors": false,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+      "*.tsx": "${basename}.scss",
+      "package.json": "pnpm-lock.yaml,yarn.lock,bun.lockb"
+    },
+    "files.autoSave": "onWindowChange",
+    "files.exclude": {
+      "**/.vinxi": true,
+      "**/.wrangler": true,
+      "**/dist": true
+      //"**/node_modules/": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.openRepositoryInParentFolders": "always",
+    // Copilot
+    "github.copilot.chat.editor.temporalContext.enabled": true,
+    "github.copilot.chat.generateTests.codeLens": true,
+    "github.copilot.chat.search.semanticTextResults": true,
+    "github.copilot.enable": {
+      "*": true,
+      "markdown": true,
+      "plaintext": true,
+      "scminput": false
+    },
+    "github.gitProtocol": "ssh",
+    "gitlens.graph.minimap.dataType": "lines",
+    "gitlens.graph.minimap.enabled": false,
+    "html.format.indentHandlebars": true,
+    "html.format.templating": true,
+    "iconify.inplace": true,
+    "java.autobuild.enabled": false,
+    // JavaScript and TypeScript
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "javascript.inlayHints.parameterNames.enabled": "literals",
+    "javascript.inlayHints.parameterTypes.enabled": true,
+    "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "javascript.inlayHints.variableTypes.enabled": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "js/ts.implicitProjectConfig.checkJs": true,
+    "js/ts.implicitProjectConfig.experimentalDecorators": true,
+    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "typescript.inlayHints.parameterNames.enabled": "literals",
+    "typescript.inlayHints.parameterTypes.enabled": true,
+    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "typescript.inlayHints.variableTypes.enabled": true,
+    "typescript.preferences.quoteStyle": "double",
+    "typescript.preferGoToSourceDefinition": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    // misc.
+    "python.analysis.typeCheckingMode": "standard",
+    "redhat.telemetry.enabled": false,
+    "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.hover.actions.references.enable": true,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "scss.format.spaceAroundSelectorSeparator": true,
+    "scss.lint.duplicateProperties": "warning",
+    "search.exclude": {
+      "**/.git": true,
+      "**/node_modules": true
+    },
+    "terminal.integrated.fontSize": 14,
+    // Use Nu shell
+    "terminal.integrated.defaultProfile.osx": "nu",
+    "terminal.integrated.profiles.osx": {
+      "nu": {
+        "path": "/opt/homebrew/bin/nu"
+      }
+    },
+    // Crazy high scrollback buffer just in case
+    "terminal.integrated.scrollback": 10000,
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.pinnedTabSizing": "shrink",
+    "workbench.editor.tabActionCloseVisibility": false,
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "workbench.sideBar.location": "right"
+  }
