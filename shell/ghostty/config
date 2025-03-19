@@ -13,6 +13,7 @@ adjust-cursor-thickness=2
 #macos-titlebar-tabs = true
 
 # Make ⌥← and ⌥→ work as they do on linux
+# This isn't needed due to nushell configuration changes
 keybind = alt+left=esc:[1;5D
 keybind = alt+right=esc:[1;5C
 macos-option-as-alt = true
