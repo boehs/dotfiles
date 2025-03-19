@@ -7,7 +7,7 @@ $env.path ++= ["/usr/local/bin"]
 $env.config.show_banner = false
 
 # we love vim
-$env.config.buffer_editor = "vim"
+$env.config.buffer_editor = "nvim"
 $env.config.edit_mode = 'vi'
 
 source ./prompt.nu

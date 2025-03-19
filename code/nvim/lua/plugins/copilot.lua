@@ -2,6 +2,7 @@
 return {
   {
     "olimorris/codecompanion.nvim",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       require("codecompanion").setup({
         stratagies = {
