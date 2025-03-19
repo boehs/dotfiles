@@ -259,9 +259,15 @@ require("lazy").setup({
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require("gruvbox").setup({
-        transparent_mode = true,
+        -- transparent_mode = true,
       })
       vim.cmd.colorscheme("gruvbox")
+      vim.cmd([[
+        highlight Normal guibg=none
+        highlight NonText guibg=none
+        highlight Normal ctermbg=none
+        highlight NonText ctermbg=none
+      ]])
     end,
   },
 
@@ -317,6 +323,51 @@ require("lazy").setup({
     -- See `:help ibl`
     main = "ibl",
     opts = {},
+  },
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    config = function()
+      require("toggleterm").setup({
+        open_mapping = [[<c-\>]],
+      })
+      vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<CR>", { desc = "[T]oggle [T]erminal" })
+      vim.keymap.set("t", "<C-\\>", "<cmd>ToggleTerm<CR>", { desc = "[T]oggle [T]erminal" })
+      local lazygit = require("toggleterm.terminal").Terminal:new({
+        cmd = "lazygit",
+        dir = "git_dir",
+        direction = "float",
+        float_opts = {
+          border = "single",
+        },
+        -- function to run on opening the terminal
+        on_open = function(term)
+          vim.cmd("startinsert!")
+          vim.api.nvim_buf_set_keymap(
+            term.bufnr,
+            "n",
+            "q",
+            "<cmd>close<CR>",
+            { noremap = true, silent = true }
+          )
+        end,
+        -- function to run on closing the terminal
+        on_close = function(term)
+          vim.cmd("startinsert!")
+        end,
+      })
+
+      function _lazygit_toggle()
+        lazygit:toggle()
+      end
+
+      vim.api.nvim_set_keymap(
+        "n",
+        "<leader>tg",
+        "<cmd>lua _lazygit_toggle()<CR>",
+        { noremap = true, silent = true, desc = "[T]oggle Lazy[G]it" }
+      )
+    end,
   },
   {
     "windwp/nvim-autopairs",

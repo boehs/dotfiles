@@ -135,6 +135,7 @@ local buttons = {
     button("󱁐 s f", "󰈞  Find file"),
     button("󱁐 s g", "󱎸  Grep"),
     button("󱁐 s .", "󰊄  Find recent file"),
+    button("󱁐 t t", " Toggle Terminal"),
   },
   opts = {
     spacing = 0,
