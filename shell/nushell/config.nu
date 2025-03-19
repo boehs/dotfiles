@@ -1,6 +1,8 @@
 $env.path ++= ["/opt/homebrew/bin"]
 $env.path ++= ["~/.cargo/bin"]
+# todo: this shouldn't be hardcoded
 $env.path ++= ["~/Library/Python/3.9/bin"]
+$env.path ++= ["/usr/local/bin"]
 
 $env.config.show_banner = false
 
@@ -16,6 +18,31 @@ use ($nu.default-config-dir | path join mise.nu)
 let mise_path = $nu.default-config-dir | path join mise.nu
 ^mise activate nu | save $mise_path --force
 source ./zoxide.nu
+
+# make vi support emacs mode bindings
+$env.config.keybindings = [
+  {
+    name: move_one_word_left
+    modifier: alt
+    keycode: char_b
+    mode: [emacs, vi_insert, vi_normal]
+    event: { edit: movewordleft }
+  }
+  {
+    name: move_one_word_right
+    modifier: alt
+    keycode: char_f
+    mode: [emacs, vi_insert, vi_normal]
+    event: { edit: movewordright }
+  },
+  {
+    name: delete_one_word_backward
+    modifier: alt
+    keycode: backspace
+    mode: [emacs, vi_insert, vi_normal]
+    event: {edit: backspaceword}
+  }
+]
 
 # carapace
 def --env get-env [name] { $env | get $name }
