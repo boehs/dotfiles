@@ -204,7 +204,7 @@ require("lazy").setup({
         end,
       },
       { "nvim-telescope/telescope-ui-select.nvim" },
-      { "echasnovski/mini.icons",                 enabled = vim.g.have_nerd_font },
+      { "echasnovski/mini.icons" },
     },
     config = function()
       require("telescope").setup({
@@ -267,9 +267,7 @@ require("lazy").setup({
       vim.cmd.colorscheme("gruvbox")
       vim.cmd([[
         highlight Normal guibg=none
-        highlight NonText guibg=none
         highlight Normal ctermbg=none
-        highlight NonText ctermbg=none
       ]])
     end,
   },
