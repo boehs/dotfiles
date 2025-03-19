@@ -129,17 +129,11 @@ local function button(sc, txt, keybind, keybind_opts)
 end
 
 local buttons = {
-  type = "group",
-  val = {
-    button("e", "  New file", "<cmd>ene <CR>"),
-    button("󱁐 s f", "󰈞  Find file"),
-    button("󱁐 s g", "󱎸  Grep"),
-    button("󱁐 s .", "󰊄  Find recent file"),
-    button("󱁐 t t", " Toggle Terminal"),
-  },
-  opts = {
-    spacing = 0,
-  },
+  button("e", "  New file", "<cmd>ene <CR>"),
+  button("󱁐 s f", "󰈞  Find file"),
+  button("󱁐 s g", "󱎸  Grep"),
+  button("󱁐 s .", "󰊄  Find recent file"),
+  button("󱁐 t t", "  Toggle Terminal"),
 }
 
 return {
@@ -159,7 +153,8 @@ return {
         "              like tears in the rain.",
       }
       dashboard.section.footer.opts.hl = "Comment"
-      dashboard.section.buttons.val = buttons.val
+      dashboard.section.buttons.val = buttons
+      dashboard.section.buttons.opts.spacing = 0
       require("alpha").setup(dashboard.opts)
     end,
   },
