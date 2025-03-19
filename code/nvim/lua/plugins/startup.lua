@@ -132,9 +132,9 @@ local buttons = {
   type = "group",
   val = {
     button("e", "  New file", "<cmd>ene <CR>"),
-    button("SPC s f", "󰈞  Find file"),
-    button("SPC s g", "󱎸  Grep"),
-    button("SPC s .", "󰊄  Find recent file"),
+    button("󱁐 s f", "󰈞  Find file"),
+    button("󱁐 s g", "󱎸  Grep"),
+    button("󱁐 s .", "󰊄  Find recent file"),
   },
   opts = {
     spacing = 0,
