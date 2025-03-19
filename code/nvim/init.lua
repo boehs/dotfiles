@@ -318,7 +318,6 @@ require("lazy").setup({
     main = "ibl",
     opts = {},
   },
-  --require 'plugins.lint',
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
