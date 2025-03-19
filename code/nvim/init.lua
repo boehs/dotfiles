@@ -330,6 +330,7 @@ require("lazy").setup({
     config = function()
       require("toggleterm").setup({
         open_mapping = [[<c-\>]],
+        shell = "/opt/homebrew/bin/nu"
       })
       vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<CR>", { desc = "[T]oggle [T]erminal" })
       vim.keymap.set("t", "<C-\\>", "<cmd>ToggleTerm<CR>", { desc = "[T]oggle [T]erminal" })
