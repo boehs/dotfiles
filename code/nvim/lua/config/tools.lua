@@ -37,6 +37,10 @@ local servers = {
   cssls = {},
 }
 
+local masonless_servers = {
+  nushell = {}
+}
+
 local formatters = {
   javascript = { 'biomejs' },
   javascriptreact = { 'biomejs' },
@@ -66,4 +70,5 @@ return {
   servers = servers,
   formatters = formatters,
   linters = linters,
+  masonless_servers = masonless_servers,
 }

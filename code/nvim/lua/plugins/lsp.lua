@@ -203,6 +203,9 @@ return {
           end,
         },
       })
+      for tool, config in pairs(tools.masonless_servers) do
+        require('lspconfig')[tool].setup(config)
+      end
     end,
   },
 
