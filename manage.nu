@@ -20,7 +20,13 @@ let mappings = {
   },
   "code/nvim": {
     "mac": '~/.config/nvim/',
-  }
+  },
+  "shell/atuin.toml": {
+    "mac": '~/.config/atuin/config.toml',
+  },
+  "shell/mise.toml": {
+    "mac": '~/.config/mise/config.toml',
+  },
 }
 
 def "main restore" [] {
