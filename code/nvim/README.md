@@ -6,14 +6,14 @@ Initially based on Kickstart
 
 - `lazy` (pm)
 - `alpha-nvim` (splash screen)
-- `nvim-cmp` (lsp display) & `mason` (lsp plugin manager)
+- `blink.cmp` (lsp display) & `mason` (lsp plugin manager)
 - `nvim-treesitter` (syntax highlighting)
 - `nvim-lint` (linter)
 - `conform` (formatter)
 - `telescope` (fzf)
 - `oil` & `neo-tree` (netrw & sidebar fs)
 - `which-key` (inline help)
-- `copilot.lua` & `copilot-cmp`
+- `copilot.lua` & `blink-cmp-copilot`
 - utilities:
   - `todo-comments`
   - `gitsigns.nvim`
