@@ -34,7 +34,8 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
-			keymap = { preset = "super-tab" },
+			keymap = { preset = "enter" },
+			-- Display a preview of the selected item on the current line
 			-- Default list of enabled providers defined so that you can extend it
 			-- elsewhere in your config, without redefining it, due to `opts_extend`
 			sources = {
@@ -49,6 +50,16 @@ return {
 				},
 			},
 			fuzzy = { implementation = "prefer_rust_with_warning" },
+			signature = { enabled = true },
+			--ghost_text = { enabled = true },
+			--documentation = { auto_show = true, auto_show_delay_ms = 500 },
+			--completion = {
+			--	menu = {
+			--		draw = {
+			--			treesitter = "lsp",
+			--		},
+			--	},
+			--},
 		},
 		opts_extend = { "sources.default" },
 	},
