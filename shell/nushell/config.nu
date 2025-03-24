@@ -13,7 +13,6 @@ $env.config.edit_mode = 'vi'
 source ./prompt.nu
 
 # plugins
-source ~/.local/share/atuin/init.nu
 use ($nu.default-config-dir | path join mise.nu)
 let mise_path = $nu.default-config-dir | path join mise.nu
 ^mise activate nu | save $mise_path --force
@@ -43,6 +42,8 @@ $env.config.keybindings = [
     event: {edit: backspaceword}
   }
 ]
+
+source ~/.local/share/atuin/init.nu
 
 # carapace
 def --env get-env [name] { $env | get $name }
