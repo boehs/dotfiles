@@ -1,12 +1,11 @@
-
 #!/usr/bin/env nu
 
 # detect the current operating system by matching over `sys host`'s name field
 
 let os = match (sys host | get name) {
-  "Darwin" => "mac",
-  "linux" => "linux",
-  "windows" => "windows",
+  Darwin => "mac",
+  linux => "linux",
+  windows => "windows",
   _ => "unknown"
 }
 
