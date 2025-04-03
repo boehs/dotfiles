@@ -11,6 +11,7 @@ $env.config.buffer_editor = "nvim"
 $env.config.edit_mode = 'vi'
 
 source ./prompt.nu
+source ./ssh.nu
 
 # plugins
 use ($nu.default-config-dir | path join mise.nu)
