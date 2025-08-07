@@ -47,7 +47,7 @@ def "main restore" [] {
 def "main backup" [] {
   print "Backing up files"
   $mappings | items { |local,v|
-    let foreign = $v | get -i $os
+    let foreign = $v | get -o $os
     if $foreign == null {
       return "error: foreign path not found"
     }
@@ -61,7 +61,7 @@ def "main backup" [] {
     print $'backing up ($foreign_path) to ($local_path)'
     cp -r $foreign_path $local_path
     # for each path in excludes, remove it from the local path
-    let excludes = $v | get -i excludes
+    let excludes = $v | get -o excludes
     if $excludes != null {
       for $exclude in $excludes {
         let exclude_path = $unexpanded_local_path | path join $exclude
