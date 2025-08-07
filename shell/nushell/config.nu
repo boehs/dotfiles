@@ -1,3 +1,5 @@
+use std-rfc/kv *
+
 $env.path ++= ["/opt/homebrew/bin"]
 $env.path ++= ["~/.cargo/bin"]
 # todo: this shouldn't be hardcoded
@@ -9,6 +11,13 @@ $env.config.show_banner = false
 # we love vim
 $env.config.buffer_editor = "nvim"
 $env.config.edit_mode = 'vi'
+
+$env.config.hooks = {
+  # this injects universal kv variables into the environment
+  # because these variable are global, they can be set from a job
+  # currently set by ssh.nu
+  pre_execution: [(kv universal-variable-hook)]
+}
 
 source ./prompt.nu
 source ./ssh.nu
